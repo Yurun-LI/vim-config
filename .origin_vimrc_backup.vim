@@ -12,6 +12,3 @@ try
     source ~/.vim_config/customizations/customize.vim
 catch
 endtry
-
-
-

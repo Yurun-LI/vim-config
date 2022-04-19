@@ -35,7 +35,7 @@ if os.path.exists(os.path.join(HOME,'.vim_config/')):
 shutil.copytree(ROOT,os.path.join(HOME,'.vim_config/'))
 print('"configuration is completed and please enjoy it ~~')
 print("all of the configurations are based on the files in ~/.vim_config/customizations/\n")
-print("all the files are moved to ~/.vim_config\nyou can remove this directory by\n\t '$ rm -rf {}'".format(ROOT))
+print("all the files are moved to ~/.vim_config\nyou can remove this directory by\n\t $ 'rm -rf {}'".format(ROOT))
 
 
 
