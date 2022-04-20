@@ -18,10 +18,12 @@ brew install vim
 #### 3. Moving to `~/.vim_config/plugins/default/YouCompleteMe` and compile YCM to make it work. For details, it can be seen in [tabnine/YouCompleteMe](https://github.com/tabnine/YouCompleteMe#installation)
 ```bash
 cd ~/.vim_config/plugins/default/YouCompleteMe
-python3 ./install.py --all # if you want it support all the languages, run it
+python3 ./install.py --all 
+# if you want it support all the languages, run it
 
 # if you only want C/C++ compiler, then run
-# it should be noted that here the python3 is /usr/bin/python3 rather then other python3
+# it should be noted that here the python3 is /usr/bin/python3
+# rather then other python3
 python3 ./install.py --clangd-completer
 ```
 After YCM is complied, open a file to test if there is still any problem.
