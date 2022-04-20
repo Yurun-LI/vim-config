@@ -1,5 +1,5 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => For Python files
+" => For python files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let python_highlight_all = 1
 au FileType python syn keyword pythonDecorator True None False self
@@ -43,7 +43,7 @@ function! JavaScriptFold()
 endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => For Shell files
+" => For shell files
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if exists('$TMUX') 
     if has('nvim')
