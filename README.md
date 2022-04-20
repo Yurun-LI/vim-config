@@ -15,7 +15,7 @@ brew install vim
 ```
 #### 2. Open the vim and run `:PlugInstall` command to check if all the plugins are installed or updated.
 
-Moving to `~/.vim_config/plugins/default/YouCompleteMe` and compile YCM to make it work. For details, it can be seen in [tabnine/YouCompleteMe](https://github.com/tabnine/YouCompleteMe#installation)
+#### 3. Moving to `~/.vim_config/plugins/default/YouCompleteMe` and compile YCM to make it work. For details, it can be seen in [tabnine/YouCompleteMe](https://github.com/tabnine/YouCompleteMe#installation)
 ```bash
 cd ~/.vim_config/plugins/default/YouCompleteMe
 python3 ./install.py --all # if you want it support all the languages, run it
