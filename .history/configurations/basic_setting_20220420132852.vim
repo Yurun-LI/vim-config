@@ -31,12 +31,6 @@ filetype indent on
 let mapleader=" " 
 nnoremap <Space> <Nop>
 
-" set timedelay of <leader>
-set timeoutlen=500
-
-" copy the yunk content to system clipboard
-set clipboard=unnamed
-
 " Show number of lines
 set number
 " If you want to show relative number
@@ -134,7 +128,7 @@ set undofile " When the file is closed, the undo history is retained
 set history=400
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Editor setting for Vim (mainly normal and insert mode)
+" => Editor setting for Vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " backspace action configure
@@ -189,19 +183,6 @@ set tabstop=4
 set lbr
 set tw=500
 
-"" INSERT mode
-let &t_SI = "\<Esc>[5 q" . "\<Esc>]12;green\x7"
-" REPLACE mode
-let &t_SR = "\<Esc>[3 q" . "\<Esc>]12;black\x7"
-" NORMAL mode
-let &t_EI = "\<Esc>[1 q" . "\<Esc>]12;green\x7"
-" 1 -> blinking block
-" 2 -> solid block
-" 3 -> blinking underscore
-" 4 -> solid underscore
-" 5 -> blinking vertical bar
-" 6 -> solid vertical bar
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Visual mode setting for Vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -225,24 +206,6 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Convenient operation for Vim (mainly key mapping)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" set <ESC> as j+k
-inoremap jk <ESC>
-
-" set Ctrl+e and Ctrl to move pointer to start or end of the line
-
-inoremap <C-e> <ESC>$a
-inoremap <C-a> <ESC>^i
-
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
-                
-inoremap <C-b> <S-Left>
-inoremap <C-f> <S-Right>
-
-nnoremap <C-e> $
-nnoremap <C-a> ^h 
 
 " Fast saving
 nmap <leader>w :w!<cr>
