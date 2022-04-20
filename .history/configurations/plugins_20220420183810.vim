@@ -1,4 +1,5 @@
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" This file includes plugin and plugin configuration
 " all of the plugins are managed by the vim-plug
 " and if you want to use other plugin manager, please set it
 " in ~/.vim_config/configurations/customize.vim
@@ -51,7 +52,7 @@ Plug 'airblade/vim-gitgutter'
 
 " Javascript
 Plug 'pangloss/vim-javascript'
-" Lastplace - reopen files at your last edit position
+" Lastplace
 Plug 'farmergreg/vim-lastplace'
 " LESS-adds syntax highlighting, indenting and autocompletion for the dynamic stylesheet language LESS
 Plug 'groenewege/vim-less'
@@ -68,6 +69,8 @@ Plug 'honza/vim-snippets'
 Plug 'maxbrunsfeld/vim-yankstack'
 " Markdown
 Plug 'preservim/vim-markdown'
+" Indent object
+Plug 'michaeljsmith/vim-indent-object'
 " typescript
 Plug 'leafgarland/typescript-vim'
 " ack
@@ -80,7 +83,7 @@ Plug 'frazrepo/vim-rainbow'
 Plug 'tabnine/YouCompleteMe'
 " Make vim transparent
 Plug 'tribela/vim-transparent'
-" spector - Code Debugger
+" spector
 Plug 'puremourning/vimspector'
 " indent line
 Plug 'Yggdroot/indentLine'
@@ -89,6 +92,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'takac/vim-hardtime'
 Plug 'tpope/vim-abolish'
 Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tcomment_vim'
 Plug 'digitaltoad/vim-pug'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'tpope/vim-repeat'
@@ -292,7 +296,6 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 
 " >>>>>>>>> Git gutter >>>>>>>>>
-let g:gitgutter_enabled=0
 nnoremap <silent> <leader>gt :GitGutterToggle<cr>
 
 " >>>>>>>>> EditorConfig >>>>>>>>
@@ -354,6 +357,3 @@ if exists(":Tabularize")
     nmap <Leader>a: :Tabularize /:\zs<CR>
     vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
-
-" >>>>>>>>> Visual multi cursor >>>>>>>>>
-" continue to be configured

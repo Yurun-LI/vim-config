@@ -1,4 +1,5 @@
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" This file includes plugin and plugin configuration
 " all of the plugins are managed by the vim-plug
 " and if you want to use other plugin manager, please set it
 " in ~/.vim_config/configurations/customize.vim
@@ -16,7 +17,6 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 " lightline
 Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
-Plug 'maximbaz/lightline-ale'
 
 " Auto complete parentheses
 Plug 'jiangmiao/auto-pairs'
@@ -28,6 +28,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'yegappan/mru'
 " EditorConfig
 Plug 'editorconfig/editorconfig-vim'
+" Gist
+Plug 'mattn/webapi-vim'
+Plug 'mattn/vim-gist'
 " limelight.vim and goyo
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/goyo.vim'
@@ -48,10 +51,11 @@ Plug 'nvie/vim-flake8'
 Plug 'nvie/vim-pep8'
 " Gitgutter
 Plug 'airblade/vim-gitgutter'
-
+" indent-guides
+Plug 'nathanaelkane/vim-indent-guides'
 " Javascript
 Plug 'pangloss/vim-javascript'
-" Lastplace - reopen files at your last edit position
+" Lastplace
 Plug 'farmergreg/vim-lastplace'
 " LESS-adds syntax highlighting, indenting and autocompletion for the dynamic stylesheet language LESS
 Plug 'groenewege/vim-less'
@@ -68,6 +72,8 @@ Plug 'honza/vim-snippets'
 Plug 'maxbrunsfeld/vim-yankstack'
 " Markdown
 Plug 'preservim/vim-markdown'
+" Indent object
+Plug 'michaeljsmith/vim-indent-object'
 " typescript
 Plug 'leafgarland/typescript-vim'
 " ack
@@ -80,7 +86,7 @@ Plug 'frazrepo/vim-rainbow'
 Plug 'tabnine/YouCompleteMe'
 " Make vim transparent
 Plug 'tribela/vim-transparent'
-" spector - Code Debugger
+" spector
 Plug 'puremourning/vimspector'
 " indent line
 Plug 'Yggdroot/indentLine'
@@ -89,6 +95,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'takac/vim-hardtime'
 Plug 'tpope/vim-abolish'
 Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tcomment_vim'
 Plug 'digitaltoad/vim-pug'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'tpope/vim-repeat'
@@ -116,6 +123,8 @@ let g:yankstack_yank_keys = ['y', 'd']
 
 nmap <C-p> <Plug>yankstack_substitute_older_paste
 nmap <C-n> <Plug>yankstack_substitute_newer_paste
+
+" >>>>>>>>> auto-pairs >>>>>>>>>
 
 " >>>>>>>>> NRED Tree >>>>>>>>>
 let g:NERDTreeWinPos = "right"
@@ -166,29 +175,12 @@ vmap Si S(i_<esc>f)
 au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 
 " >>>>>>>>> lightline >>>>>>>>>
-let g:lightline.component_expand = {
-    \  'linter_checking': 'lightline#ale#checking',
-    \  'linter_infos': 'lightline#ale#infos',
-    \  'linter_warnings': 'lightline#ale#warnings',
-    \  'linter_errors': 'lightline#ale#errors',
-    \  'linter_ok': 'lightline#ale#ok',
-    \ }
-let g:lightline.component_type = {
-    \     'linter_checking': 'right',
-    \     'linter_infos': 'right',
-    \     'linter_warnings': 'warning',
-    \     'linter_errors': 'error',
-    \     'linter_ok': 'right',
-    \ }
 let g:lightline = {
     \ 'colorscheme': 'wombat',
     \ 'active': {
     \   'left': [ ['mode', 'paste'],
     \             ['fugitive', 'readonly', 'filename', 'modified'] ],
-    \ 'right': [ [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ],
-    \            [ 'lineinfo' ],
-    \            [ 'percent' ],
-    \            [ 'fileformat', 'fileencoding', 'filetype'] ]
+    \   'right': [ [ 'lineinfo' ], ['percent'] ]
     \ },
     \ 'component': {
     \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
@@ -230,10 +222,6 @@ let g:bufExplorerShowRelativePath=1
 let g:bufExplorerFindActive=1
 let g:bufExplorerSortBy='name'
 map <leader>o :BufExplorer<cr>
-" \<Leader\>be normal open
-" \<Leader\>bt toggle open / close
-" \<Leader\>bs force horizontal split open
-" \<Leader\>bv force vertical split open
 
 " >>>>>>>>> MRU >>>>>>>>>
 let MRU_Max_Entries = 400
@@ -257,7 +245,7 @@ let g:limelight_conceal_guifg = 'DarkGray'
 let g:limelight_conceal_guifg = '#777777'
 
 " Default: 0.5
-let g:limelight_default_coefficient = 0.5
+let g:limelight_default_coefficient = 0.7
 
 " Number of preceding/following paragraphs to include (default: 0)
 let g:limelight_paragraph_span = 1
@@ -271,7 +259,6 @@ let g:limelight_eop = '\ze\n^\s'
 " Highlighting priority (default: 10)
 "   Set it to -1 not to overrule hlsearch
 let g:limelight_priority = -1
-
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
@@ -279,9 +266,7 @@ autocmd! User GoyoLeave Limelight!
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'python': ['flake8'],
-\   'go': ['go', 'golint', 'errcheck'],
-\   'c': ['clang'],
-\   'c++': ['clang']
+\   'go': ['go', 'golint', 'errcheck']
 \}
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
 " Disabling highlighting
@@ -346,14 +331,3 @@ let g:indentLine_color_term = 243
 " However, these characters will only work with files whose encoding is UTF-8.
 let g:indentLine_char_list = ['¦']
 
-" >>>>>>>>> Tabularize >>>>>>>>>
-" you can customize the mappings
-if exists(":Tabularize")
-    nmap <Leader>a= :Tabularize /=<CR>
-    vmap <Leader>a= :Tabularize /=<CR>
-    nmap <Leader>a: :Tabularize /:\zs<CR>
-    vmap <Leader>a: :Tabularize /:\zs<CR>
-endif
-
-" >>>>>>>>> Visual multi cursor >>>>>>>>>
-" continue to be configured
