@@ -26,4 +26,15 @@ python3 ./install.py --clangd-completer
 After YCM is complied, open a file to test if there is still any problem.
 And if it is OK, your can enjoy smooth coding!
 
+## Uninstallation
+The original configuration `~/.vimrc` has been backup to `~/.vim_config/.origin_vimrc_backup.vim`. You should put the contents of this file back to the original `~/.vimrc` by running
+```bash
+try
+  cat ~/.vim_config/.origin_vimrc_backup.vim > ~/.vimrc
+catch
+endtry
 
+# And check if you original configuration is back.
+# Then remove the ~/.vim_config directory by
+rm -rf ~/.vim_config
+```
