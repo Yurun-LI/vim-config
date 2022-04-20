@@ -1,0 +1,153 @@
+[submodule "plugins/default/vim"]
+	path = plugins/default/vim
+	url = git@github.com:dracula/vim
+[submodule "plugins/default/lightline.vim"]
+	path = plugins/default/lightline.vim
+	url = git@github.com:itchyny/lightline.vim
+[submodule "plugins/default/ale"]
+	path = plugins/default/ale
+	url = git@github.com:dense-analysis/ale
+[submodule "plugins/default/lightline-ale"]
+	path = plugins/default/lightline-ale
+	url = git@github.com:maximbaz/lightline-ale
+[submodule "plugins/default/auto-pairs"]
+	path = plugins/default/auto-pairs
+	url = git@github.com:jiangmiao/auto-pairs
+[submodule "plugins/default/bufexplorer"]
+	path = plugins/default/bufexplorer
+	url = git@github.com:jlanzarotta/bufexplorer
+[submodule "plugins/default/ctrlp.vim"]
+	path = plugins/default/ctrlp.vim
+	url = git@github.com:ctrlpvim/ctrlp.vim
+[submodule "plugins/default/mru"]
+	path = plugins/default/mru
+	url = git@github.com:yegappan/mru
+[submodule "plugins/default/editorconfig-vim"]
+	path = plugins/default/editorconfig-vim
+	url = git@github.com:editorconfig/editorconfig-vim
+[submodule "plugins/default/limelight.vim"]
+	path = plugins/default/limelight.vim
+	url = git@github.com:junegunn/limelight.vim
+[submodule "plugins/default/goyo.vim"]
+	path = plugins/default/goyo.vim
+	url = git@github.com:junegunn/goyo.vim
+[submodule "plugins/default/nerdtree"]
+	path = plugins/default/nerdtree
+	url = git@github.com:preservim/nerdtree
+[submodule "plugins/default/nerdtree-git-plugin"]
+	path = plugins/default/nerdtree-git-plugin
+	url = git@github.com:Xuyuanp/nerdtree-git-plugin
+[submodule "plugins/default/vim-nerdtree-syntax-highlight"]
+	path = plugins/default/vim-nerdtree-syntax-highlight
+	url = git@github.com:tiagofumo/vim-nerdtree-syntax-highlight
+[submodule "plugins/default/vim-devicons"]
+	path = plugins/default/vim-devicons
+	url = git@github.com:ryanoasis/vim-devicons
+[submodule "plugins/default/rust.vim"]
+	path = plugins/default/rust.vim
+	url = git@github.com:rust-lang/rust.vim
+[submodule "plugins/default/tabular"]
+	path = plugins/default/tabular
+	url = git@github.com:godlygeek/tabular
+[submodule "plugins/default/sslsecure.vim"]
+	path = plugins/default/sslsecure.vim
+	url = git@github.com:chr4/sslsecure.vim
+[submodule "plugins/default/vim-flake8"]
+	path = plugins/default/vim-flake8
+	url = git@github.com:nvie/vim-flake8
+[submodule "plugins/default/vim-pep8"]
+	path = plugins/default/vim-pep8
+	url = git@github.com:nvie/vim-pep8
+[submodule "plugins/default/vim-gitgutter"]
+	path = plugins/default/vim-gitgutter
+	url = git@github.com:airblade/vim-gitgutter
+[submodule "plugins/default/vim-javascript"]
+	path = plugins/default/vim-javascript
+	url = git@github.com:pangloss/vim-javascript
+[submodule "plugins/default/vim-lastplace"]
+	path = plugins/default/vim-lastplace
+	url = git@github.com:farmergreg/vim-lastplace
+[submodule "plugins/default/vim-less"]
+	path = plugins/default/vim-less
+	url = git@github.com:groenewege/vim-less
+[submodule "plugins/default/vim-visual-multi"]
+	path = plugins/default/vim-visual-multi
+	url = git@github.com:mg979/vim-visual-multi
+[submodule "plugins/default/vim-ruby"]
+	path = plugins/default/vim-ruby
+	url = git@github.com:vim-ruby/vim-ruby
+[submodule "plugins/default/ultisnips"]
+	path = plugins/default/ultisnips
+	url = git@github.com:SirVer/ultisnips
+[submodule "plugins/default/vim-addon-mw-utils"]
+	path = plugins/default/vim-addon-mw-utils
+	url = git@github.com:MarcWeber/vim-addon-mw-utils
+[submodule "plugins/default/tlib_vim"]
+	path = plugins/default/tlib_vim
+	url = git@github.com:tomtom/tlib_vim
+[submodule "plugins/default/vim-snippets"]
+	path = plugins/default/vim-snippets
+	url = git@github.com:honza/vim-snippets
+[submodule "plugins/default/vim-yankstack"]
+	path = plugins/default/vim-yankstack
+	url = git@github.com:maxbrunsfeld/vim-yankstack
+[submodule "plugins/default/vim-markdown"]
+	path = plugins/default/vim-markdown
+	url = git@github.com:preservim/vim-markdown
+[submodule "plugins/default/typescript-vim"]
+	path = plugins/default/typescript-vim
+	url = git@github.com:leafgarland/typescript-vim
+[submodule "plugins/default/ack.vim"]
+	path = plugins/default/ack.vim
+	url = git@github.com:mileszs/ack.vim
+[submodule "plugins/default/nerdcommenter"]
+	path = plugins/default/nerdcommenter
+	url = git@github.com:preservim/nerdcommenter
+[submodule "plugins/default/vim-rainbow"]
+	path = plugins/default/vim-rainbow
+	url = git@github.com:frazrepo/vim-rainbow
+[submodule "plugins/default/YouCompleteMe"]
+	path = plugins/default/YouCompleteMe
+	url = git@github.com:tabnine/YouCompleteMe
+[submodule "plugins/default/vim-transparent"]
+	path = plugins/default/vim-transparent
+	url = git@github.com:tribela/vim-transparent
+[submodule "plugins/default/vimspector"]
+	path = plugins/default/vimspector
+	url = git@github.com:puremourning/vimspector
+[submodule "plugins/default/indentLine"]
+	path = plugins/default/indentLine
+	url = git@github.com:Yggdroot/indentLine
+[submodule "plugins/default/vim-hardtime"]
+	path = plugins/default/vim-hardtime
+	url = git@github.com:takac/vim-hardtime
+[submodule "plugins/default/vim-abolish"]
+	path = plugins/default/vim-abolish
+	url = git@github.com:tpope/vim-abolish
+[submodule "plugins/default/vim-pug"]
+	path = plugins/default/vim-pug
+	url = git@github.com:digitaltoad/vim-pug
+[submodule "plugins/default/vim-python-pep8-indent"]
+	path = plugins/default/vim-python-pep8-indent
+	url = git@github.com:Vimjas/vim-python-pep8-indent
+[submodule "plugins/default/vim-repeat"]
+	path = plugins/default/vim-repeat
+	url = git@github.com:tpope/vim-repeat
+[submodule "plugins/default/vim-surround"]
+	path = plugins/default/vim-surround
+	url = git@github.com:tpope/vim-surround
+[submodule "plugins/default/vim-rhubarb"]
+	path = plugins/default/vim-rhubarb
+	url = git@github.com:tpope/vim-rhubarb
+[submodule "plugins/default/vim-fugitive"]
+	path = plugins/default/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive
+[submodule "plugins/default/vim-commentary"]
+	path = plugins/default/vim-commentary
+	url = git@github.com:tpope/vim-commentary
+[submodule "plugins/default/vim-pyte"]
+	path = plugins/default/vim-pyte
+	url = git@github.com:therubymug/vim-pyte
+[submodule "plugins/default/nginx.vim"]
+	path = plugins/default/nginx.vim
+	url = git@github.com:chr4/nginx.vim
