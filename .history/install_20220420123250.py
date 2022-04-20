@@ -25,23 +25,19 @@ shutil.copyfile(my_vimrc_path,vimrc_path)
 # else copy the clone directory to ~/.vim_config/
 dest_dir = os.path.join(HOME,'.vim_config/')
 
-if dest_dir == ROOT:
+if os.path.exists(dest_dir) and dest_dir != ROOT:
+    print(" ~/.vim_config/ directory already exists!")
+    is_remove = input("\nIf remove the current ~/.vim_config directory [Y/n]:")
+    if is_remove in ['Y','y']:
+        shutil.rmtree(os.path.join(HOME,'.vim_config/'))
+    else:
+        print("configuration is interrupt !")
+        sys.exit(0)
+    shutil.copytree(ROOT,os.path.join(HOME,'.vim_config/'))
+
     print('"configuration is completed and please enjoy it ~~')
     print("all of the configurations are based on the files in ~/.vim_config/configurations/\n")
     print("all the files are moved to ~/.vim_config\nyou can remove this directory by\n\t '$ rm -rf {}'".format(ROOT))
-else:
-    if os.path.exists(dest_dir):
-        print(" ~/.vim_config/ directory already exists!")
-        is_remove = input("\nIf remove the current ~/.vim_config directory [Y/n]:")
-        if is_remove in ['Y','y']:
-            shutil.rmtree(os.path.join(HOME,'.vim_config/'))
-        else:
-            print("configuration is interrupt !")
-            sys.exit(0)
-    shutil.copytree(ROOT,os.path.join(HOME,'.vim_config/'))
-
-
-
 
 
 

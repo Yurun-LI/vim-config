@@ -157,7 +157,7 @@ set showmatch
 set mat=2
 
 " Chinese or Japanese compatible
-let $LANG='en'
+Let $LANG='en'
 set langmenu=en
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim

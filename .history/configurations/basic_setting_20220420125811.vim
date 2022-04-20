@@ -18,10 +18,6 @@
 " Not compatible with Vi
 set nocompatible
 
-" Enable syntax highlighting
-syntax on
-syntax enable
-
 " Enable filetype plugins and indents
 filetype plugin on
 filetype indent on
@@ -85,6 +81,10 @@ set tm=500
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Color and font settings for vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Enable syntax highlighting
+syntax on
+syntex enable
 
 " Enable 256 colors palette in Gnome Terminal
 if $COLORTERM == 'gnome-terminal'
@@ -157,7 +157,7 @@ set showmatch
 set mat=2
 
 " Chinese or Japanese compatible
-let $LANG='en'
+Let $LANG='en'
 set langmenu=en
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim

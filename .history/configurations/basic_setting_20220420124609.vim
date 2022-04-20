@@ -11,16 +11,11 @@
 " file
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General settings for vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Not compatible with Vi
 set nocompatible
-
-" Enable syntax highlighting
-syntax on
-syntax enable
 
 " Enable filetype plugins and indents
 filetype plugin on
@@ -36,6 +31,13 @@ set number
 " If you want to show relative number
 " you can add 'set relativenumber'
 
+" support mouse operation
+set mouse=a
+
+" auto read when a file is changed 
+set autoread
+au FocusGained, BufEnter * checktime
+
 " Enable command line completion in enhanced mode
 set wildmenu
 
@@ -47,21 +49,22 @@ else
     set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 endif
 
-" support mouse operation
-set mouse=a
-
-" auto read when a file is changed 
-set autoread
-au FocusGained, BufEnter * checktime
-
 " Show the position of the current cursor
 set ruler
 
 " Add margin on left border
 set foldcolumn=1
 
+" No error bells
+set noerrorbells
+set novisualbells
+
 " Height of command bar
 set cmdheight=1
+
+" Cancel warning on command
+set vb t_vb=
+set tm=500
 
 " Disable error sounds on MacVim
 if has("gui_macvim")
@@ -74,17 +77,13 @@ set magic
 " buffer becomes hidden when it is abandoned
 set hid
 
-" No error bells
-set noerrorbells
-set novisualbell
-" Cancel warning on command
-set vb t_vb=
-set tm=500
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Color and font settings for vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Enable syntax highlighting
+syntax on
+syntex enable
 
 " Enable 256 colors palette in Gnome Terminal
 if $COLORTERM == 'gnome-terminal'
@@ -157,7 +156,7 @@ set showmatch
 set mat=2
 
 " Chinese or Japanese compatible
-let $LANG='en'
+Let $LANG='en'
 set langmenu=en
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
