@@ -37,7 +37,7 @@ if dest_dir != ROOT:
     shutil.copytree(ROOT,os.path.join(HOME,'.vim_config/'))
     print('"configuration is completed and please enjoy it ~~')
     print("all of the configurations are based on the files in ~/.vim_config/configurations/\n")
-    print("all the files are moved to ~/.vim_config\n\n And, you can remove the download folders by\n\n\t '$ rm -rf {}'\n".format(ROOT))
+    print("all the files are moved to ~/.vim_config\n And, you can remove the downloads by\n\t '$ rm -rf {}'".format(ROOT))
 else:
     print('"configuration is completed and please enjoy it ~~')
     print("all of the configurations are based on the files in ~/.vim_config/configurations/\n")

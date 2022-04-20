@@ -77,21 +77,7 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'leafgarland/typescript-vim'
 " ack
 Plug 'mileszs/ack.vim'
-" Nerdcommenter
-Plug 'preservim/nerdcommenter'
-" Vim-rainbow
-Plug 'frazrepo/vim-rainbow'
-" YCM
-Plug 'tabnine/YouCompleteMe'
-" Make vim transparent
-Plug 'tribela/vim-transparent'
-" spector
-Plug 'puremourning/vimspector'
-" indent line
-Plug 'Yggdroot/indentLine'
-
 " others
-Plug 'takac/vim-hardtime'
 Plug 'tpope/vim-abolish'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tcomment_vim'
@@ -281,46 +267,5 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 nnoremap <leader>vv :.GBrowse!<CR>
 xnoremap <leader>vv :'<'>GBrowse!<CR>
 
-" >>>>>>>>> YCM (integrated with tabnine) >>>>>>>>>
-let g:ycm_key_list_select_completion = ['<TAB>', '<Down>', '<Enter>']
-let g:ycm_collect_identifiers_from_tags_files = 1           " 开启 YCM 基于标签引擎
-let g:ycm_collect_identifiers_from_comments_and_strings = 1 " 注释与字符串中的内容也用于补全
-let g:syntastic_ignore_files=[".*\.py$"]
-let g:ycm_seed_identifiers_with_syntax = 1                  " 语法关键字补全
-let g:ycm_complete_in_comments = 1                          " 在注释输入中也能补全
-let g:ycm_complete_in_strings = 1                           " 在字符串输入中也能补全
-let g:ycm_key_list_stop_completion = ['<C-y>']
 
-inoremap <C-d> <ESC>ld$a
-let g:ycm_error_symbol = '>>'
-let g:ycm_warning_symbol = '>*'
-nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
-nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nmap <F4> :YcmDiags<CR>
-
-" >>>>>>>>> Vim-rainbow >>>>>>>>>
-au FileType c,cpp,objc,objcpp call rainbow#load()
-let g:rainbow_active = 1
-let g:rainbow_load_separately = [
-    \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
-    \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
-    \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
-    \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
-    \ ]
-let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
-let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
-
-" >>>>>>>>> Vim-snippets >>>>>>>>>
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" >>>>>>>>> Indentline >>>>>>>>>
-"let g:indentLine_setColors = 0
-let g:indentLine_defaultGroup = 'SpecialKey'
-let g:indentLine_color_term = 243
-" You can also use one of ¦, ┆, │, ⎸, or ▏ to display more beautiful lines. 
-" However, these characters will only work with files whose encoding is UTF-8.
-let g:indentLine_char_list = ['¦']
 
