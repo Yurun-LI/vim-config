@@ -13,7 +13,7 @@ It is noted that some plugins need Vim 8.0+ support, so you'd better check your 
 ```bash
 brew install vim
 ```
-#### 2. Open the vim and run `:PlugInstall` command to check if all the plugins are installed or updated.
+#### 2. Open the vim and run `:PlugInstall` command to install and update all the default plugins.
 
 #### 3. Moving to `~/.vim_config/plugins/default/YouCompleteMe` and compile YCM to make it work. For details, it can be seen in [tabnine/YouCompleteMe](https://github.com/tabnine/YouCompleteMe#installation)
 ```bash
