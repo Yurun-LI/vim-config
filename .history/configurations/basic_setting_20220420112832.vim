@@ -14,29 +14,13 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General settings for vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Not compatible with Vi
-set nocompatible
-
-" Enable syntax highlighting
-syntax on
-syntex enable
 
 " Enable filetype plugins and indents
 filetype plugin on
 filetype indent on
 
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
-let mapleader=" " 
-nnoremap <Space> <Nop>
-
-" Show number of lines
-set number
-" If you want to show relative number
-" you can add 'set relativenumber'
-
-" support mouse operation
-set mouse=a
+" Enable syntax highlighting
+syntex enable
 
 " auto read when a file is changed 
 set autoread
@@ -81,6 +65,9 @@ set magic
 " buffer becomes hidden when it is abandoned
 set hid
 
+" Save history of lines for Vim to remember
+set history=400
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Color and font settings for vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -112,7 +99,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Default encoding
-set encoding=utf-8
+set encoding=utf8
 
 " Set file type by unix
 set ffs=unix,dos,mac
@@ -120,11 +107,7 @@ set ffs=unix,dos,mac
 " Turn nobackup off, and recommand using git to do it
 set nobackup
 set nowb
-set noswapfile " Do not create swap files
-set undofile " When the file is closed, the undo history is retained
-
-" Save history of lines for Vim to remember
-set history=400
+set noswapfile
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editor setting for Vim
@@ -146,7 +129,7 @@ set hlsearch
 " Makes search act like search in modern browsers
 set incsearch
 
-" Do not redraw while executing macros (good performance config)
+" Don't redraw while executing macros (good performance config)
 set lazyredraw
 
 " Show matching brackets
@@ -165,7 +148,7 @@ set so=7
 
 set ai "Auto indent
 set si "Smart indent
-set wrap "Auto line wrapping
+set wrap "Wrap lines
 
 " Use spaces instead of tabs
 set expandtab
@@ -204,6 +187,10 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Convenient operation for Vim (mainly key mapping)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader=" " 
+nnoremap <Space> <Nop>
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -327,7 +314,7 @@ function! HasPaste()
     return ''
 endfunction
 
-" Do not close window, when deleting a buffer
+" Don't close window, when deleting a buffer
 command! Bclose call <SID>BufcloseCloseIt()
 function! <SID>BufcloseCloseIt()
     let l:currentBufNum = bufnr("%")
