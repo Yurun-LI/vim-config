@@ -1,4 +1,4 @@
-# vim-config
+# Vim Configuration
 ## Installation (Linux/MacOS)
 #### 1. Clone the repository and then run `.install.py`.
 ```bash
