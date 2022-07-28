@@ -2,9 +2,11 @@
 ## Installation (Linux/MacOS)
 #### 1. Clone the repository and then run `.install.py`.
 ```bash
-cd ~
-git clone git@github.com:Yurun-LI/vim-config.git ~/.vim_config
-cd ~/.vim_config && ./install.py
+cd ~ \
+&& mkdir ~/.vim_config \
+&& git clone git@github.com:Yurun-LI/vim-config.git ~/.vim_config \
+&& cd ~/.vim_config \
+&& ./install.py
 
 ```
 
