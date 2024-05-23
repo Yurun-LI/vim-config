@@ -4,7 +4,7 @@
 ```bash
 cd ~ \
 && mkdir ~/.vim_config \
-&& git clone git@github.com:Yurun-LI/vim-config.git ~/.vim_config \
+&& git clone https://github.com/Yurun-LI/vim-config.git ~/.vim_config \
 && cd ~/.vim_config \
 && ./install.py
 
